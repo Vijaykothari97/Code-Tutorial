@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+  <head>
+<link type="text/css" href="project.css" rel="stylesheet" / >
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=900, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Code Tutorial</title>
+        <meta  name="description" content="Code Tutorial  gives information about some Useful Programs.
+        The Programs are solved using both C AND Java.The site has programs like Pallindrome,BubbleSort,3RD largest 
+        number in an Array,Fibonacci Series , Factorial of number etc.">
+        <meta name="keywords" content="Code Tutorial,Useful Programs,Pallindrome,Fibonacci Series,Factiorial,
+         Bubble Sorting,3RD Largest,C PROGRAM,JAVA,Ouput,< stdio.h >,project.html">
+
+  </head>
+    <body>
+  <div class="page-wrap">
+   <div id ="upper">
+    <a href="https://vijaykothari97@gmail.com" >Email:vijaykothari97@gmail.com</a>
+    <div>Mobile-9172333972</div>
+       </div>   
+       <div id ="upper1">
+  <img src="/logo1.png" alt="logo1" />
+  <h1 >Code Tutorial</h1>   
+ 
+ </div>
+ 
+ <div id ="navbar" >
+   <a href="https://www.gmail.com/" target="_blank">Gmail</a>
+   <a href="https://www.google.com/" target="_blank">Google</a>
+   <a href="https://www.instagram.com/vijay_kotharii/" target="_blank">Instagram</a>
+   <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+
+</div>
+       <div class = "content">
+      <h2 id = "start"><strong>Useful Programs</strong></h2>   
+        <br/>
+        
+       <div class="order">
+        		<h2><strong>1.Program on Pallindrome </strong></h2>
+                  <p id ="para">
+                  	An integer is a palindrome if the reverse of that number is equal to the original number.
+                  This program reverses an integer (entered by the user) using while loop. Then, if statement is used to check whether the reversed number is equal to the original number or not.
+                  </p>
+                  <br/>
+                  <h3><strong>a.IMPLEMENTATION IN C PROGRAM</strong></h3> 
+                  <p id ="palli">
+#include < stdio.h >
+int main() 
+{
+    int n, reversedInteger = 0, remainder, originalInteger;
+   printf("Enter an integer: ");
+    scanf("%d", &n);
+originalInteger = n;
+// reversed integer is stored in variable 
+    while( n!=0 )
+    {
+        remainder = n%10;
+        reversedInteger = reversedInteger*10 + remainder;
+        n /= 10;
+    }
+// palindrome if orignalInteger and reversedInteger are equal
+    if (originalInteger == reversedInteger)
+        printf("%d is a palindrome.", originalInteger);
+    else
+        printf("%d is not a palindrome.", originalInteger);
+    return 0;
+}                 </p>
+                  <br/>
+                  <h3><strong>b.IMPLEMENTATION IN  JAVA</strong></h3> 
+                  <p id ="palli" >
+    public class Palindrome {
+public static void main(String[] args) {
+int num = 121, reversedInteger = 0, remainder, originalInteger;
+ originalInteger = num;
+// reversed integer is stored in variable 
+        while( num != 0 )
+        {
+            remainder = num % 10;
+            reversedInteger = reversedInteger * 10 + remainder;
+            num  /= 10;
+        }
+// palindrome if orignalInteger and reversedInteger are equal
+        if (originalInteger == reversedInteger)
+            System.out.println(originalInteger + " is a palindrome.");
+        else
+            System.out.println(originalInteger + " is not a palindrome.");
+    }
+}
+<br/>
+ <h4 id ="out">Ouput:</h4>
+<div id ="output">121 is a palindrome number.</div>
+                 <hr>
+                  </p>
+                   
+                    <strong><h2>2.Fibonacci Series</h2></strong>
+                      
+                       <p id ="para">
+                  	    The Fibonacci series is a series where the next term is the sum of pervious two terms. The first two terms of the Fibonacci sequence is 0 followed by 1.
+                        The Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, 21, ...
+                        The Fibonacci sequence is a set of numbers that starts with a one or a zero, followed by a one, and proceeds based on the rule that each number (called a Fibonacci number) is equal to the sum of the preceding two numbers.
+                       </p>
+                       <br/>
+                       <h3><strong>a.IMPLEMENTATION IN  C</strong></h3> 
+                       <p id ="para2">
+#include < stdio.h >
+int main()
+{
+    int i, n, t1 = 0, t2 = 1, nextTerm;
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    printf("Fibonacci Series: ");
+    for (i = 1; i <= n; ++i)
+    {
+        printf("%d, ", t1);
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+    }
+    return 0;
+}                      </p>
+                       <h3><strong>b.IMPLEMENTATION IN JAVA</strong></h3> 
+                       <p id ="palli">
+    public class Fibonacci {
+    public static void main(String[] args) {
+    int n = 10, t1 = 0, t2 = 1;
+        System.out.print("First " + n + " terms: ");
+        for (int i = 1; i <= n; ++i)
+        {
+            System.out.print(t1 + " + ");
+           int sum = t1 + t2;
+            t1 = t2;
+            t2 = sum;
+        }
+    }
+}
+                       <h4 id ="out">Ouput:</h4>
+<div id ="output">0,1,1,2,3,5,8,13,21,....</div>
+                       <hr>
+                       </p>
+                         <strong><h2>3.Factiorial of a Number</h2></strong>
+                           <p id ="para">
+                  	The factorial, symbolized by an exclamation mark (!), is a quantity defined for all integer s greater than or equal to 0. For an integer n greater than or equal to 1, the factorial is the product of all integers less than or equal to n but greater than or equal to 1.
+                    The factorial of a positive integer n is equal to 1*2*3*...n. You will learn to calculate the factorial of a number using for loop in this example.
+                           </p>
+                           <h3><strong>a.IMPLEMENTATION IN C</strong></h3> 
+                           <p id ="palli">
+#include < stdio.h >
+int main()
+{
+    int n, i;
+    unsigned long long factorial = 1;
+    printf("Enter an integer: ");
+    scanf("%d",&n);
+   // show error if the user enters a negative integer
+    if (n < 0)
+        printf("Error! Factorial of a negative number doesn't exist.");
+     else
+    {
+        for(i=1; i<=n; ++i)
+        {
+            factorial *= i;              // factorial = factorial*i;
+        }
+        printf("Factorial of %d = %llu", n, factorial);
+    }
+
+    return 0;
+}
+                            </p>
+                           <h3 ><strong>b.IMPLEMENTATION IN JAVA</strong></h3> 
+                           <p id ="palli">
+ public class Factorial {
+ public static void main(String[] args) {
+        int num = 10;
+        long factorial = 1;
+        for(int i = 1; i <= num; ++i)
+        {
+            // factorial = factorial * i;
+            factorial *= i;
+        }
+        System.out.printf("Factorial of %d = %d", num, factorial);
+    }
+}
+<br/>
+ <h4 id ="out">Ouput:</h4>
+<div id ="output">Factorial of 10 = 3628800</div>
+<hr>
+
+                            </p>
+                              <h2><strong>4.Find 3RD Largest Number In The Array</strong></h2>
+                               <p id ="para">
+                  	We can find the third largest number in an array in Java and C by sorting the array and returning the 3rd largest number.First we need to sort the array using any sorts after sorting return the 3rd largest element.The Program is as follows.
+                               </p>
+                               <h3><strong>a.IMPLEMENTATION IN C</strong></h3> 
+                               <p id ="palli1">
+
+#include < bits/stdc++.h >
+ 
+void thirdLargest(int arr[], int arr_size)
+{
+    /* There should be atleast three elements */
+    if (arr_size < 3)
+    {
+        printf(" Invalid Input ");
+        return;
+    }
+ // Find first largest element
+    int first = arr[0];
+    for (int i = 1; i < arr_size ; i++)
+        if (arr[i] > first)
+            first = arr[i];
+ // Find second largest element
+    int second = INT_MIN;
+    for (int i = 0; i < arr_size ; i++)
+        if (arr[i] > second && arr[i] < first)
+            second = arr[i];
+ // Find third largest element
+    int third = INT_MIN;
+    for (int i = 0; i < arr_size ; i++)
+        if (arr[i] > third && arr[i] < second)
+            third = arr[i];
+  printf("The third Largest element is %d\n", third);
+}
+ /* Driver program to test above function */
+int main()
+{
+    int arr[] = {12, 13, 1, 10, 34, 16};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    thirdLargest(arr, n);
+    return 0;
+}                              </p>
+                               <h3><strong>b.IMPLEMENTATION IN JAVA</strong></h3> 
+                               <p id ="palli">
+ public class ThirdLargestInArrayExample{  
+public static int getThirdLargest(int[] a, int total){  
+int temp;  
+for (int i = 0; i < total; i++)   
+        {  
+            for (int j = i + 1; j < total; j++)   
+            {  
+                if (a[i] > a[j])   
+                {  
+                    temp = a[i];  
+                    a[i] = a[j];  
+                    a[j] = temp;  
+                }  
+            }  
+        }  
+       return a[total-3];  
+}  
+public static void main(String args[]){  
+int a[]={1,2,5,6,3,2};  
+int b[]={44,66,99,77,33,22,55};  
+System.out.println("Third Largest: "+getThirdLargest(a,6));  
+System.out.println("Third Largest: "+getThirdLargest(b,7));  
+}
+<br/>
+<h4 id ="out">Ouput:</h4>
+<div id ="output">Third Largest:3<br/>
+  Third Largest:66
+</div>
+ <hr>                         
+                               </p>
+                                <h2><strong>5.Program for  Bubble Sorting</strong></h2>
+                              <p id ="para">
+                  	           Bubble sort sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order.
+                             </p>
+                          <h3><strong>a.IMPLEMENTATION IN C</strong></h3> 
+                        <p id ="palli1">
+                                  / C program for implementation of Bubble sort
+#include < stdio.h >
+int main()
+{
+  int array[100], n, c, d, swap;
+  printf("Enter number of elements\n");
+  scanf("%d", &n);
+  printf("Enter %d integers\n", n);
+   for (c = 0; c < n; c++)
+    scanf("%d", &array[c]);
+ for (c = 0 ; c < n - 1; c++)
+  {
+    for (d = 0 ; d < n - c - 1; d++)
+    {
+      if (array[d] > array[d+1]) /* For decreasing order use < */
+      {
+        swap       = array[d];
+        array[d]   = array[d+1];
+        array[d+1] = swap;
+      }
+    }
+  }
+  printf("Sorted list in ascending order:\n");
+ for (c = 0; c < n; c++)
+     printf("%d\n", array[c]);
+return 0
+}                      </p>
+                    <h3><strong>b.IMPLEMENTATION IN JAVA</strong></h3> 
+                  <p id ="palli1">
+                    import java.util.Scanner;
+ class BubbleSort {
+  public static void main(String []args) {
+    int n, c, d, swap;
+    Scanner in = new Scanner(System.in);
+ System.out.println("Input number of integers to sort");
+    n = in.nextInt();
+int array[] = new int[n];
+ System.out.println("Enter " + n + " integers");
+ for (c = 0; c < n; c++) 
+      array[c] = in.nextInt();
+ for (c = 0; c < ( n - 1 ); c++) {
+      for (d = 0; d < n - c - 1; d++) {
+        if (array[d] > array[d+1]) /* For descending order use < */
+        {
+          swap       = array[d];
+          array[d]   = array[d+1];
+          array[d+1] = swap;
+        }
+      }
+    }
+ System.out.println("Sorted list of numbers");
+ for (c = 0; c < n; c++) 
+      System.out.println(array[c]);
+  }
+}     <h4 id ="out">Ouput:</h4>
+    <div id ="output">1,2,3,4,5,6,7,8.....</div>
+  <hr>
+</p> 
+            </div>
+         <br/>
+      </div>
+    </div>
+ <h3 id="thanks">Thanks Hitesh Sir for creating such opportunities!</h3> 
+
+  <script >
+window.onscroll = function() {myFunction11()};
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+function myFunction11() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+        </script>
+    </body>
+</html>
